@@ -2,6 +2,8 @@
 
 Site exclusivo de **Save the Date** para o casamento de **Isabelle & Bruno** — 13 de Janeiro de 2029.
 
+🌐 **Site Online:** [https://bbezerra77.github.io/SITE-DE-CASAMENTO/](https://bbezerra77.github.io/SITE-DE-CASAMENTO/)
+
 ## ✨ Recursos
 - **Brasão Animado (SVG)**: Monograma clássico com letras entrelaçadas, fita caligráfica, estrelas cintilantes e órbita de luz celestial.
 - **Efeito 3D Interativo**: Brasão com inclinação 3D dinâmica ao movimento do mouse no desktop.
