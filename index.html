@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabelle & Bruno — Save the Date</title>
+    <meta name="description" content="Isabelle & Bruno - Save the Date - 13 de Janeiro de 2029. Em breve, mais detalhes sobre o nosso grande dia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle canvas for sparkle effects -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Elegant ornamental border overlay -->
+    <div class="border-overlay">
+        <div class="border-corner border-corner--tl"></div>
+        <div class="border-corner border-corner--tr"></div>
+        <div class="border-corner border-corner--bl"></div>
+        <div class="border-corner border-corner--br"></div>
+        <div class="border-line border-line--top"></div>
+        <div class="border-line border-line--right"></div>
+        <div class="border-line border-line--bottom"></div>
+        <div class="border-line border-line--left"></div>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero__sparkle-group">
+                <span class="sparkle sparkle--1">✦</span>
+                <span class="sparkle sparkle--2">✦</span>
+                <span class="sparkle sparkle--3">✦</span>
+                <span class="sparkle sparkle--4">✦</span>
+                <span class="sparkle sparkle--5">✦</span>
+                <span class="sparkle sparkle--6">✦</span>
+            </div>
+
+            <!-- Animated Living Monogram Crest (Inspired by Foto 1) -->
+            <div class="monogram-wrapper animate-on-scroll" id="monogram-wrapper" data-delay="100">
+                <div class="monogram-crest" id="monogram-crest">
+                    <!-- Glowing golden ambient light behind crest -->
+                    <div class="crest-ambient-glow"></div>
+
+                    <!-- SVG Vector Crest with Interlocking Monogram & Ornaments -->
+                    <svg class="crest-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Brasão Monograma Isabelle &amp; Bruno">
+                        <defs>
+                            <!-- Metallic Gold Multi-Stop Foil Gradient -->
+                            <linearGradient id="crestGoldGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+                                <stop offset="0%" stop-color="#fff5c4" />
+                                <stop offset="18%" stop-color="#e8ca73" />
+                                <stop offset="42%" stop-color="#c59f3d" />
+                                <stop offset="68%" stop-color="#f8e3a2" />
+                                <stop offset="85%" stop-color="#af8527" />
+                                <stop offset="100%" stop-color="#dbb65c" />
+                            </linearGradient>
+
+                            <!-- Bright Twinkle Star Gradient -->
+                            <linearGradient id="crestStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="35%" stop-color="#fff0bd" />
+                                <stop offset="70%" stop-color="#e0b85a" />
+                                <stop offset="100%" stop-color="#bd912d" />
+                            </linearGradient>
+
+                            <!-- Flowing Ribbon Swash Gradient -->
+                            <linearGradient id="crestSwashGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+                                <stop offset="0%" stop-color="#dfb755" />
+                                <stop offset="25%" stop-color="#fff4c8" />
+                                <stop offset="55%" stop-color="#d4aa43" />
+                                <stop offset="80%" stop-color="#fdf3d0" />
+                                <stop offset="100%" stop-color="#b68b2a" />
+                            </linearGradient>
+
+                            <!-- Revolving Orbit Light Beam Gradient -->
+                            <linearGradient id="crestOrbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fff8d6" stop-opacity="1" />
+                                <stop offset="20%" stop-color="#e8ca73" stop-opacity="0.8" />
+                                <stop offset="50%" stop-color="#c59f3d" stop-opacity="0" />
+                                <stop offset="100%" stop-color="#c59f3d" stop-opacity="0" />
+                            </linearGradient>
+
+                            <!-- Specular Light Shimmer Sweep -->
+                            <linearGradient id="crestShimmerBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                                <stop offset="45%" stop-color="rgba(255,255,255,0)" />
+                                <stop offset="50%" stop-color="rgba(255,255,255,0.85)" />
+                                <stop offset="55%" stop-color="rgba(255,255,255,0)" />
+                                <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                            </linearGradient>
+
+                            <!-- Luminous Glow Filter -->
+                            <filter id="crestGlowFilter" x="-25%" y="-25%" width="150%" height="150%">
+                                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Outer Revolving Celestial Light Orbit -->
+                        <g class="crest-orbit-wrapper">
+                            <circle cx="250" cy="250" r="222" class="crest-ring-orbit" stroke="url(#crestOrbitGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="140 1255" />
+                        </g>
+
+                        <!-- Dual Concentric Metallic Gold Rings -->
+                        <circle cx="250" cy="250" r="222" class="crest-ring crest-ring--outer" stroke="url(#crestGoldGrad)" stroke-width="2" fill="none" />
+                        <circle cx="250" cy="250" r="211" class="crest-ring crest-ring--inner" stroke="url(#crestGoldGrad)" stroke-width="1.2" fill="none" opacity="0.85" />
+
+                        <!-- North Ornamental Accent (Top 4-Point Star + Wing Lines + Dots) -->
+                        <g class="crest-ornament crest-ornament--north">
+                            <path class="crest-star crest-star--north" d="M 250 16 L 253.8 33.5 L 268 38 L 253.8 42.5 L 250 60 L 246.2 42.5 L 232 38 L 246.2 33.5 Z" fill="url(#crestStarGrad)" />
+                            <circle cx="250" cy="38" r="1.8" fill="#ffffff" />
+                            <line x1="210" y1="38" x2="228" y2="38" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <line x1="272" y1="38" x2="290" y2="38" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="204" cy="38" r="2.2" fill="url(#crestGoldGrad)" />
+                            <circle cx="296" cy="38" r="2.2" fill="url(#crestGoldGrad)" />
+                            <circle cx="236" cy="32" r="1.6" fill="url(#crestGoldGrad)" />
+                            <circle cx="264" cy="32" r="1.6" fill="url(#crestGoldGrad)" />
+                        </g>
+
+                        <!-- South Ornamental Accent (Bottom 4-Point Star + Wing Lines + Dots) -->
+                        <g class="crest-ornament crest-ornament--south">
+                            <path class="crest-star crest-star--south" d="M 250 440 L 253.8 457.5 L 268 462 L 253.8 466.5 L 250 484 L 246.2 466.5 L 232 462 L 246.2 457.5 Z" fill="url(#crestStarGrad)" />
+                            <circle cx="250" cy="462" r="1.8" fill="#ffffff" />
+                            <line x1="210" y1="462" x2="228" y2="462" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <line x1="272" y1="462" x2="290" y2="462" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="204" cy="462" r="2.2" fill="url(#crestGoldGrad)" />
+                            <circle cx="296" cy="462" r="2.2" fill="url(#crestGoldGrad)" />
+                            <circle cx="236" cy="468" r="1.6" fill="url(#crestGoldGrad)" />
+                            <circle cx="264" cy="468" r="1.6" fill="url(#crestGoldGrad)" />
+                        </g>
+
+                        <!-- East & West Accents on the Ring -->
+                        <polygon points="28,247 32,250 28,253 24,250" fill="url(#crestGoldGrad)" />
+                        <polygon points="472,247 476,250 472,253 468,250" fill="url(#crestGoldGrad)" />
+
+                        <!-- Monogram Center: Interlocked "I" and "B" with Calligraphic Flourish -->
+                        <g class="crest-monogram-letters">
+                            <!-- Stately Roman Serif "I" -->
+                            <path class="crest-letter crest-letter--i" d="M 174 125 L 236 125 L 236 132 C 224 132 216 138 216 148 L 216 282 C 216 292 224 298 236 298 L 236 305 L 174 305 L 174 298 C 186 298 194 292 194 282 L 194 148 C 194 138 186 132 174 132 Z" fill="url(#crestGoldGrad)" filter="url(#crestGlowFilter)" />
+
+                            <!-- Classical Roman Serif "B" -->
+                            <path class="crest-letter crest-letter--b" d="M 235 125 L 298 125 C 328 125 348 139 348 165 C 348 185 334 200 312 206 C 340 214 358 232 358 262 C 358 291 332 305 296 305 L 235 305 L 235 298 C 245 298 252 292 252 282 L 252 148 C 252 138 245 132 235 132 Z M 274 141 L 274 202 L 296 202 C 316 202 328 191 328 171 C 328 152 316 141 296 141 Z M 274 218 L 274 289 L 298 289 C 322 289 336 278 336 254 C 336 230 322 218 298 218 Z" fill="url(#crestGoldGrad)" filter="url(#crestGlowFilter)" />
+
+                            <!-- Swooping Calligraphic Ribbon Swash (Weaves across I and B) -->
+                            <path class="crest-swash" d="M 136 232 C 126 250 134 266 150 268 C 172 270 190 248 198 226 C 208 194 225 174 252 175 C 276 176 295 198 308 222 C 320 245 338 274 366 296" fill="none" stroke="url(#crestSwashGrad)" stroke-width="4.5" stroke-linecap="round" />
+
+                            <!-- Twinkling Diamond Star between I and B -->
+                            <path class="crest-star crest-star--center" d="M 226 236 L 229.5 247.5 L 239 251 L 229.5 254.5 L 226 266 L 222.5 254.5 L 213 251 L 222.5 247.5 Z" fill="url(#crestStarGrad)" />
+                            <circle cx="226" cy="251" r="1.5" fill="#ffffff" />
+                        </g>
+
+                        <!-- Names inside the Crest: ISABELLE & BRUNO -->
+                        <text x="250" y="367" class="crest-names-text" fill="url(#crestGoldGrad)">ISABELLE &amp; BRUNO</text>
+
+                        <!-- Divider bar with center diamond star beneath the names -->
+                        <g class="crest-divider-group">
+                            <line x1="148" y1="395" x2="234" y2="395" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="148" cy="395" r="2.2" fill="url(#crestGoldGrad)" />
+
+                            <!-- Center star in divider -->
+                            <path class="crest-star crest-star--divider" d="M 250 387 L 252.2 393 L 258 395 L 252.2 397 L 250 403 L 247.8 397 L 242 395 L 247.8 393 Z" fill="url(#crestStarGrad)" />
+                            <circle cx="250" cy="395" r="1.2" fill="#ffffff" />
+
+                            <line x1="266" y1="395" x2="352" y2="395" stroke="url(#crestGoldGrad)" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="352" cy="395" r="2.2" fill="url(#crestGoldGrad)" />
+                        </g>
+                    </svg>
+
+                    <!-- Orbiting micro sparkles around the crest -->
+                    <div class="crest-float-sparkles">
+                        <span class="c-sparkle c-sparkle--1">✦</span>
+                        <span class="c-sparkle c-sparkle--2">✧</span>
+                        <span class="c-sparkle c-sparkle--3">✦</span>
+                        <span class="c-sparkle c-sparkle--4">✧</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative divider -->
+            <div class="divider animate-on-scroll" data-delay="250">
+                <span class="divider__line"></span>
+                <span class="divider__diamond">◆</span>
+                <span class="divider__line"></span>
+            </div>
+
+            <!-- Save the Date with animated word reveals -->
+            <h1 class="save-the-date animate-on-scroll" data-delay="350">
+                <span class="save-the-date__mask"><span class="save-the-date__word" data-word="1">Save</span></span>
+                <span class="save-the-date__mask"><span class="save-the-date__word" data-word="2">the</span></span>
+                <span class="save-the-date__mask"><span class="save-the-date__word" data-word="3">Date</span></span>
+            </h1>
+
+            <!-- Ornamental line -->
+            <div class="ornament-line animate-on-scroll" data-delay="450">
+                <span class="ornament-line__segment"></span>
+                <span class="ornament-line__dot">●</span>
+                <span class="ornament-line__segment ornament-line__segment--long"></span>
+                <span class="ornament-line__dot">●</span>
+                <span class="ornament-line__segment"></span>
+            </div>
+
+            <!-- Date display with staggered 3D entrance -->
+            <div class="date-display animate-on-scroll" data-delay="550">
+                <span class="date-display__number date-unit">13</span>
+                <span class="date-display__separator date-star">✦</span>
+                <span class="date-display__number date-unit">01</span>
+                <span class="date-display__separator date-star">✦</span>
+                <span class="date-display__number date-unit">2029</span>
+            </div>
+
+            <!-- Couple names with expanding tracking -->
+            <p class="couple-names animate-on-scroll" data-delay="650">Isabelle &amp; Bruno</p>
+
+            <!-- Coming soon message with cursive golden glow -->
+            <p class="coming-soon animate-on-scroll" data-delay="800">
+                <span class="coming-soon__text">Em breve, mais detalhes...</span>
+            </p>
+
+            <!-- Bottom sparkle group -->
+            <div class="hero__sparkle-group hero__sparkle-group--bottom">
+                <span class="sparkle sparkle--7">✦</span>
+                <span class="sparkle sparkle--8">◆</span>
+                <span class="sparkle sparkle--9">✦</span>
+                <span class="sparkle sparkle--10">◆</span>
+                <span class="sparkle sparkle--11">✦</span>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section" id="countdown">
+            <div class="section-header animate-on-scroll" data-delay="100">
+                <div class="divider divider--small">
+                    <span class="divider__line"></span>
+                    <span class="divider__diamond">◆</span>
+                    <span class="divider__line"></span>
+                </div>
+                <h2 class="section-title">Contagem Regressiva</h2>
+                <div class="divider divider--small">
+                    <span class="divider__line"></span>
+                    <span class="divider__diamond">◆</span>
+                    <span class="divider__line"></span>
+                </div>
+            </div>
+
+            <div class="countdown animate-on-scroll" data-delay="250" id="countdown-timer">
+                <div class="countdown__item" data-item="1">
+                    <div class="countdown__card-glow"></div>
+                    <div class="countdown__number" id="days">000</div>
+                    <div class="countdown__label">Dias</div>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item" data-item="2">
+                    <div class="countdown__card-glow"></div>
+                    <div class="countdown__number" id="hours">00</div>
+                    <div class="countdown__label">Horas</div>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item" data-item="3">
+                    <div class="countdown__card-glow"></div>
+                    <div class="countdown__number" id="minutes">00</div>
+                    <div class="countdown__label">Minutos</div>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item" data-item="4">
+                    <div class="countdown__card-glow"></div>
+                    <div class="countdown__number" id="seconds">00</div>
+                    <div class="countdown__label">Segundos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section" id="message">
+            <div class="message-card animate-on-scroll" data-delay="150">
+                <div class="message-card__corner message-card__corner--tl"></div>
+                <div class="message-card__corner message-card__corner--tr"></div>
+                <div class="message-card__corner message-card__corner--bl"></div>
+                <div class="message-card__corner message-card__corner--br"></div>
+                
+                <span class="sparkle sparkle--msg-1">✦</span>
+                <span class="sparkle sparkle--msg-2">✦</span>
+
+                <div class="message-card__content">
+                    <p class="message-card__line" data-line="1">
+                        Estamos muito felizes em compartilhar
+                    </p>
+                    <p class="message-card__line" data-line="2">
+                        este momento especial com vocês.
+                    </p>
+                    <p class="message-card__line message-card__line--highlight" data-line="3">
+                        Aguardem mais novidades!
+                    </p>
+                </div>
+                
+                <div class="ornament-line ornament-line--centered">
+                    <span class="ornament-line__segment"></span>
+                    <span class="ornament-line__dot">●</span>
+                    <span class="ornament-line__segment ornament-line__segment--long"></span>
+                    <span class="ornament-line__dot">●</span>
+                    <span class="ornament-line__segment"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__content animate-on-scroll" data-delay="100">
+                <p class="footer__initials">I &amp; B</p>
+                <p class="footer__date">13 de Janeiro de 2029</p>
+                <div class="footer__sparkles">
+                    <span class="sparkle sparkle--f1">✦</span>
+                    <span class="sparkle sparkle--f2">◆</span>
+                    <span class="sparkle sparkle--f3">✦</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scroll indicator (lateral right) -->
+    <div class="scroll-indicator" id="scroll-indicator">
+        <p class="scroll-indicator__text">Deslize</p>
+        <div class="scroll-indicator__line"></div>
+        <div class="scroll-indicator__arrow">▾</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
